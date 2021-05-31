@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Joon-Hyeok
+title: About Joon-Hyeok Yim
 permalink: /about/
 ---
 
