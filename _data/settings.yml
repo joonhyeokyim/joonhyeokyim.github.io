@@ -1,0 +1,19 @@
+menu:
+- {name: 'papers', url: '/papers'}
+- {name: 'research', url: '/research'}
+- {name: 'cv', url: '/cv'}
+- {name: 'contact', url: '/contact'}
+
+# research:
+# - {name: 'Hyperbolicity and Tree-likeness', url: 'hyp-tree-spaces'}
+# - {name: 'Geometric Characteristics on Random Graphs', url: 'random-graphs'}
+# - {name: 'Ultrametric Fitting and its Applications', url: 'ultrametric-apps'}
+
+social:
+- {icon: 'github', link: 'https://github.com/joonhyeokyim'}
+# - {icon: 'twitter', link: 'https://twitter.com/iamjoon'}
+# - {icon: 'instagram', link: 'https://instagram.com/joonh_its_me'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/joon-hyeok-yim-391307127/'}
+
+contacts:
+- {name: 'Joon-Hyeok Yim', title: 'PhD Student', department: 'Mathematics', institution: 'Yale University', institution_address: '219 Prospect Street, New Haven, CT, United States', phone: '(475) 261-8724', email: 'joon-hyeok.yim@yale.edu'}
