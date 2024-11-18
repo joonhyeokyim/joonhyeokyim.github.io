@@ -16,4 +16,4 @@ social:
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/joon-hyeok-yim-391307127/'}
 
 contacts:
-- {name: 'Joon-Hyeok Yim', title: 'PhD Student', department: 'Mathematics', institution: 'Yale University', institution_address: '219 Prospect Street, New Haven, CT, United States', phone: '(475) 261-8724', email: 'joon-hyeok.yim@yale.edu'}
+- {name: 'Joon-Hyeok Yim', title: 'PhD Student', department: 'Mathematics', institution: 'Yale University', institution_address: '219 Prospect Street, New Haven, CT, United States', email: 'joon-hyeok.yim@yale.edu', office: 'LOM 220A, KT 803'}
