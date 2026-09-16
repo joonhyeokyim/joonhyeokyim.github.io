@@ -1,0 +1,4 @@
+- {title: 'Education', key: 'education'}
+- {title: 'Academic experience', key: 'academic-experience'}
+- {title: 'Teaching', key: 'teaching-experience'}
+- {title: 'Honors', key: 'honors'}
