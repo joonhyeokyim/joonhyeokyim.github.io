@@ -1,83 +1,71 @@
-# academic
+# Joon-Hyeok Yim's academic website
 
-### A Jekyll theme for academia
+Source for <https://joonhyeokyim.github.io/>, built with Jekyll and the
+[Academic theme](https://github.com/LeNPaul/academic) by Paul Le.
 
-![Academic Screenshot](https://raw.githubusercontent.com/LeNPaul/academic/gh-pages/screenshot.png)
+The site keeps its original Home, Papers, Research, CV, and Contact structure,
+portrait, and social links. Content is stored in Markdown and YAML; there is
+no database or additional JavaScript framework.
 
-A Jekyll theme designed for academia, although you can use it for almost any other purpose as well:
+## Preview locally
 
-* Showcase your research interests, publications, your curriculum vitae, the people in your research group, and your contact information.
+With Ruby 3.3 and Bundler installed (the current dependency set was verified
+with Ruby 3.3):
 
-* Manage courses that you are teaching.
-
-* Provide updates to your students and faulty.
-
-For a guide on how to deploy a Jekyll site using GitHub Pages, please check out [this article](https://paulle.ca/jekyll-tutorials/deploy-jekyll-site-github-pages).
-
-If you like my work then please consider supporting me with [Ko-fi](https://ko-fi.com/paulle).
-
-## Installation
-
-### Ruby Gem Method
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "academic-jekyll-theme"
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Open <http://localhost:4000>. For a production build:
 
-```yaml
-theme: academic-jekyll-theme
+```sh
+JEKYLL_ENV=production bundle exec jekyll build
 ```
 
-And then execute:
+The generated site is written to `_site/`. Do not commit that directory.
+Continue using the repository's existing GitHub Pages publishing settings.
 
-    $ bundle
+## Update content
 
-Or install it yourself as:
+| Content | Source |
+| --- | --- |
+| Name, short description, canonical site URL | `_config.yml` |
+| Homepage biography | `index.md` |
+| Papers, author order, venues, and links | `_data/papers.yml` |
+| Research overview | `research.md` and `_data/settings.yml` |
+| Individual research topics | `research/hyp-tree-spaces.md`, `research/random-graphs.md`, `research/ultrametric-apps.md` |
+| CV section order | `_data/cv/sections.yml` |
+| Education, experience, teaching, and honors | Corresponding files in `_data/cv/` |
+| Downloadable CV | `assets/JoonHyeokYim-CV.pdf` |
+| Email and social links | `_data/settings.yml` |
+| Portrait | `assets/img/myself.jpg` |
+| Styling | `_sass/site.scss` |
 
-    $ gem install academic-jekyll-theme
+Each paper is listed once in `_data/papers.yml`. Set `featured: true` to show
+it on the homepage as well as the Papers page. Add links as `label` / `url`
+pairs. Local asset links should start with `/`; the templates respect the
+site's `baseurl` setting.
 
-## Usage
+Contact title, department, institution, and address are optional. The draft
+retains the existing publicly listed Yale email; confirm or replace it before
+publishing if that address is no longer preferred. The downloadable CV is the
+original supplied PDF, so update it separately when a newer CV is available.
 
-### Layouts
+## Content sources
 
-The following sections describe usage instructions for this Jekyll theme,including available layouts, includes, sass and/or assets.
+The refresh uses existing public material:
 
-#### Home
+- [NeurIPS 2023 paper / arXiv record](https://arxiv.org/abs/2409.01010).
+- [Hyperbolicity, slimness, and minsize, on average](https://arxiv.org/abs/2412.05746).
+- [Yale dissertation record](https://elischolar.library.yale.edu/gsas_dissertations/1606/).
+- The existing `assets/JoonHyeokYim-CV.pdf` for education, past appointment,
+  teaching, and honors.
 
-The `_layouts/home.html` layout defines the home page for this theme. An introduction to your research group or to yourself can be provided, along with a list of featured publications. There is also a section for providing any updates through posts placed in the `_posts` directory.
+The NeurIPS paper was published in 2023 and posted to arXiv in 2024. The site
+uses the conference year. Current affiliation is left unspecified; unpublished
+projects are not listed.
 
-#### People
-
-The `_layouts/people.html` layout can be used to showcase and describe people in your research group. People are defined in the `_data/settings.yml` file, and markdown pages for each person with the `_layouts/page.html` layout can be placed in the `people` directory.
-
-#### Publications
-
-The `_layouts/publications.html` layout can be used to showcase selected publications, or the entire catalogue of publications. Direct links to the paper can be used, or a PDF copy of the paper can be served. Publications are defined in the `_data/publications.yml` file, and any PDF files that are served can be placed in the `publications` directory.
-
-#### Courses
-
-The `_layouts/courses.html` layout can be used to showcase courses that were taught in the past or are currently being taught. Courses are defined in the `_data/settings.yml` file, and markdown pages for each course with the `_layouts/page.html` layout can be placed in the `courses` directory. Related course material, such as PDF files, can also be placed in the `courses` directory in a subdirectory with the same name as the corresponding course.
-
-#### CV
-
-The `_layouts/cv.html` layout can be used to showcase a curriculum vitae. The sections of the cv are defined in the `_data/cv` directory, where each section has its own `<section>.yml` file.
-
-#### Contact
-
-The `_layouts/contact.html` layout can be used to provide contact information for the research group or the people that lead the research group. Contact information is defined in the `_data/settings.yml` file.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/LeNPaul/academic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`, then run `bundle exec jekyll serve`, and open your browser at `http://localhost:4000`. This starts a Jekyll server using this theme. Make changes to the pages, documents, data, etc. like normal to test this theme's contents. As you make modifications to this theme the site will regenerate and you should see the changes in the browser after a refresh.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The old theme's sample courses, posts, and unused People page remain in the
+source but are excluded from the build in `_config.yml`. Only `index.md`
+provides the homepage. The theme's MIT license is retained in `LICENSE.txt`.

@@ -2,13 +2,15 @@
 layout: default
 ---
 
-{{ content }}
-
 <div class="row g-5 mb-5">
-  <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-5">Research</h3>
+  <div class="col-md-12">
+    <h1 class="h3 fw-bold border-bottom pb-3 mb-5">Research</h1>
+    {{ content }}
     {% for research in site.data.settings.research %}
-      <p><a href="{{ site.github.url }}/research/{{ research.url}}">{{ research.name }}</a></p>
+      <section class="mt-4">
+        <h2 class="h5"><a href="{{ '/research/' | append: research.url | relative_url }}">{{ research.name }}</a></h2>
+        <p>{{ research.description }}</p>
+      </section>
     {% endfor %}
   </div>
 </div>

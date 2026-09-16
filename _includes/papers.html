@@ -1,14 +1,26 @@
-<div class="row g-5 mb-5">
+<section class="row g-5 mb-5" aria-labelledby="papers-heading">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-5">Papers</h3>
-    {% if page.title == "Home" %}
-      {% for item in site.data.papers.featured %}
-        <p><a href="{{ item.url }}">{{ item.name }}</a></p>
-      {% endfor %}
+    {% if page.layout == "home" %}
+      <h2 id="papers-heading" class="h3 fw-bold border-bottom pb-3 mb-5">Papers</h2>
+      {% assign papers = site.data.papers | where: "featured", true %}
+      {% assign title_tag = "h3" %}
     {% else %}
-      {% for item in site.data.papers.index %}
-        <p><a href="{{ item.url }}">{{ item.name }}</a></p>
-      {% endfor %}
+      <h1 id="papers-heading" class="h3 fw-bold border-bottom pb-3 mb-5">Papers</h1>
+      {% assign papers = site.data.papers %}
+      {% assign title_tag = "h2" %}
     {% endif %}
+    {% for paper in papers %}
+      <article class="mb-4">
+        <{{ title_tag }} class="h5"><a href="{{ paper.url | escape }}">{{ paper.title | escape }}</a></{{ title_tag }}>
+        <p class="mb-1">{{ paper.authors | escape }}</p>
+        <p class="text-muted mb-1">{{ paper.venue | escape }}</p>
+        <p>
+          {% for link in paper.links %}
+            {% assign prefix = link.url | slice: 0, 1 %}
+            <a href="{% if prefix == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url | escape }}{% endif %}" aria-label="{{ link.label | escape }}: {{ paper.title | escape }}">{{ link.label | escape }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+          {% endfor %}
+        </p>
+      </article>
+    {% endfor %}
   </div>
-</div>
+</section>

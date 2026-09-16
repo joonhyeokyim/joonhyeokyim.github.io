@@ -2,9 +2,12 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       {% include header.html %}
-      {{ content }}
+      <main id="main-content" tabindex="-1">
+        {{ content }}
+      </main>
       {% include footer.html %}
     </div>
   </body>

@@ -2,34 +2,30 @@
 layout: default
 ---
 
-{{ content }}
-
-You can also view this <a href="/assets/JoonHyeokYim-CV.pdf">PDF</a> file.
-
 <div class="row g-5 mb-5">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-5">CV</h3>
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Education</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.education %}
-          <p class="fw-bold">{{ section.title }}</p>
-          <p>{{ section.description }}</p>
-        {% endfor %}
-      </div>
-    </div>
-    <!-- <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Academic Experience</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.academic-experience %}
-          <p class="fw-bold">{{ section.title }}</p>
-          <p>{{ section.description }}</p>
-        {% endfor %}
-      </div>
-    </div> -->
+    <h1 class="h3 fw-bold border-bottom pb-3 mb-4">CV</h1>
+    {{ content }}
+    <p class="mb-5"><a href="{{ '/assets/JoonHyeokYim-CV.pdf' | relative_url }}">View CV (PDF)</a></p>
+    {% for group in site.data.cv.sections %}
+      <section class="row g-5 mb-5" aria-labelledby="cv-{{ group.key }}">
+        <div class="col-md-3">
+          <h2 id="cv-{{ group.key }}" class="h4">{{ group.title | escape }}</h2>
+        </div>
+        <div class="col-md-9">
+          {% for entry in site.data.cv[group.key] %}
+            <div class="mb-4">
+              <h3 class="h6 fw-bold">{{ entry.title | escape }}</h3>
+              <p>{{ entry.description | escape }}</p>
+              {% if entry.items %}
+                <ul>
+                  {% for item in entry.items %}<li>{{ item | escape }}</li>{% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
   </div>
 </div>
