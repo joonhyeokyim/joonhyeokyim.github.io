@@ -4,7 +4,7 @@
       <span class="fs-4 fw-bold">{{ site.title | escape }}</span>
     </a>
   </div>
-  <nav class="site-navigation d-inline-flex mt-2 mt-md-0 ms-md-auto" aria-label="Main navigation">
+  <nav class="site-navigation d-inline-flex gap-3 mt-2 mt-md-0 ms-md-auto" aria-label="Main navigation">
     {% assign current_path = page.url | remove: '.html' | append: '/' | replace: '//', '/' %}
     {% for item in site.data.settings.menu %}
       {% assign menu_path = item.url | remove: '.html' | append: '/' | replace: '//', '/' %}
