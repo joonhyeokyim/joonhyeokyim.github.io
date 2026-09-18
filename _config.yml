@@ -1,4 +1,23 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Joon-Hyeok Yim" # the name of your site, e.g. ACME Corp.
-description: "my webpage, under construction"
+url: "https://joonhyeokyim.github.io"
+baseurl: ""
+title: "Joon-Hyeok Yim"
+description: "Research and publications by Joon-Hyeok Yim."
+lang: "en"
+
+# Keep theme documentation and sample material out of the published website.
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - Gemfile
+  - Gemfile.lock
+  - academic.gemspec
+  - vendor
+  - _posts
+  - index.markdown
+  - people.md
+  - research/quantum-mechanics.md
+  - research/quantum-mechanics
+  - research/stellar-structures.md
+  - research/stellar-structures
+  - research/vector-calculus.md
+  - research/vector-calculus

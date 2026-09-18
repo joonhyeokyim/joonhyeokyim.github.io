@@ -1,7 +1,35 @@
-featured:
-- {name: 'Fitting trees to $ell_1$-hyperbolic distances (with Anna C. Gilbert). 37th Conference on Neural Information Processing Systems (NeurIPS 2023)', url: 'https://arxiv.org/pdf/2409.01010'}
-- {name: 'Hyperbolicity, slimness, and minsize, on average (with Anna C. Gilbert)', url: '/papers/HSMOA.pdf'}
+- title: 'Towards stratified sampling for redistricting plans'
+  authors: 'Zijian Wang, Gregory J. Herschlag, Joon-Hyeok Yim, Jonathan C. Mattingly, and Anna C. Gilbert'
+  venue: 'Submitted, 2026'
+  url: 'https://arxiv.org/abs/2609.18741'
+  featured: true
+  links:
+    - {label: 'arXiv', url: 'https://arxiv.org/abs/2609.18741'}
+    - {label: 'PDF', url: 'https://arxiv.org/pdf/2609.18741'}
 
-index:
-- {name: 'Fitting trees to $ell_1$-hyperbolic distances (with Anna C. Gilbert). 37th Conference on Neural Information Processing Systems (NeurIPS 2023)', url: 'https://arxiv.org/pdf/2409.01010'}
-- {name: 'Hyperbolicity, slimness, and minsize, on average (with Anna C. Gilbert)', url: '/papers/HSMOA.pdf'}
+- title: 'A quantitative tree-likeness bound from average hyperbolicity'
+  authors: 'Joon-Hyeok Yim'
+  venue: 'Preprint, 2026'
+  url: 'https://arxiv.org/abs/2609.18023'
+  featured: true
+  links:
+    - {label: 'arXiv', url: 'https://arxiv.org/abs/2609.18023'}
+    - {label: 'PDF', url: 'https://arxiv.org/pdf/2609.18023'}
+
+- title: 'Hyperbolicity, slimness, and minsize, on average'
+  authors: 'Anna C. Gilbert and Joon-Hyeok Yim'
+  venue: 'Preprint, 2024'
+  url: 'https://arxiv.org/abs/2412.05746'
+  featured: true
+  links:
+    - {label: 'arXiv', url: 'https://arxiv.org/abs/2412.05746'}
+    - {label: 'PDF', url: '/papers/HSMOA.pdf'}
+
+- title: 'Fitting trees to ℓ₁-hyperbolic distances'
+  authors: 'Joon-Hyeok Yim and Anna C. Gilbert'
+  venue: 'Advances in Neural Information Processing Systems 36 (NeurIPS 2023), 7263-7288'
+  url: 'https://arxiv.org/abs/2409.01010'
+  featured: true
+  links:
+    - {label: 'arXiv', url: 'https://arxiv.org/abs/2409.01010'}
+    - {label: 'Proceedings PDF', url: 'https://proceedings.neurips.cc/paper_files/paper/2023/file/16bce4070c4e23434451b180348e3814-Paper-Conference.pdf'}

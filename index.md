@@ -1,8 +1,11 @@
 ---
 layout: home
 title: "Home"
+description: "Research and publications by Joon-Hyeok Yim."
 ---
 
-I am a postdoctoral associate in Electrical & Computer Engineering department at <a href="https://engineering.yale.edu/academic-study/departments/electrical-and-computer-engineering">Yale University</a> under the supervision of <a href="https://annacgilbert.github.io/">Prof. Anna C. Gilbert</a>.
+My research interests include probabilistic methods, algorithms, and AI reasoning.
 
-My research interest includes geometric characteristics and algorithms on random graph models, metric embeddings, and problems with application to graph datasets.
+I received my Ph.D. from [Yale University](https://math.yale.edu/) in 2025, advised by [Anna C. Gilbert](https://annacgilbert.github.io/), and was a postdoctoral associate in Yale's Department of Electrical & Computer Engineering (2025-2026).
+
+More about my [research]({{ '/research' | relative_url }}) and [CV]({{ '/cv' | relative_url }}).

@@ -1,0 +1,94 @@
+$backgroundColor: #ffffff;
+$bodyColor: #000000;
+$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$linkColor: #212529;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+body a {
+  color: $linkColor;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: #000000;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+main {
+  overflow-wrap: break-word;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1000;
+  padding: 0.5rem 0.75rem;
+  background: $backgroundColor;
+  border: 2px solid $bodyColor;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-identity {
+  min-width: 0;
+}
+
+.site-navigation {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1rem;
+  flex-shrink: 0;
+}
+
+.site-navigation a[aria-current] {
+  text-decoration: underline !important;
+  text-underline-offset: 0.3em;
+}
+
+.profile-photo {
+  display: block;
+  width: 50%;
+  max-width: 15rem;
+  height: auto;
+}
+
+.social-media-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .site-identity {
+    text-align: center;
+  }
+
+  .site-identity > a {
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 50%;
+  }
+}

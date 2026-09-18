@@ -1,15 +1,16 @@
-<header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
-  <div>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span class="fs-4 fw-bold">{{ site.title }}</span>
-    </a>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span>{{ site.description }}</span>
+<header class="site-header d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
+  <div class="site-identity">
+    <a href="{{ '/' | relative_url }}" class="d-flex align-items-center text-decoration-none">
+      <span class="fs-4 fw-bold">{{ site.title | escape }}</span>
     </a>
   </div>
-  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+  <nav class="site-navigation d-inline-flex mt-2 mt-md-0 ms-md-auto" aria-label="Main navigation">
+    {% assign current_path = page.url | remove: '.html' | append: '/' | replace: '//', '/' %}
     {% for item in site.data.settings.menu %}
-      <a class="me-3 py-2 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
+      {% assign menu_path = item.url | remove: '.html' | append: '/' | replace: '//', '/' %}
+      {% assign menu_path_length = menu_path | size %}
+      {% assign current_section = current_path | slice: 0, menu_path_length %}
+      <a class="py-2 text-decoration-none" href="{{ item.url | relative_url }}"{% if current_path == menu_path %} aria-current="page"{% elsif current_section == menu_path %} aria-current="location"{% endif %}>{{ item.name | escape }}</a>
     {% endfor %}
   </nav>
 </header>

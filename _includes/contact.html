@@ -1,19 +1,20 @@
 <div class="row g-5 mb-5">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-5">Contact</h3>
+    <h1 class="h3 fw-bold border-bottom pb-3 mb-5">Contact</h1>
     {% for contact in site.data.settings.contacts %}
     <div class="row g-5 mb-5">
       <div class="col-md-6">
-        <h4>{{ contact.name }}</h4>
-        <p>{{ contact.title }} | {{ contact.department }}</p>
-        <p>{{ contact.institution }} | {{ contact.institution_address }}</p>
-        <!-- <p>Phone: {{ contact.phone }}</p> -->
-        <p>Email: {{ contact.email }}</p>
-        <!-- <p>Office: {{ contact.office }}</p> -->
+        <h2 class="h4">{{ contact.name | escape }}</h2>
+        {% if contact.title or contact.department %}
+        <p>{% if contact.title %}{{ contact.title | escape }}{% endif %}{% if contact.title and contact.department %} | {% endif %}{% if contact.department %}{{ contact.department | escape }}{% endif %}</p>
+        {% endif %}
+        {% if contact.institution or contact.institution_address %}
+        <p>{% if contact.institution %}{{ contact.institution | escape }}{% endif %}{% if contact.institution and contact.institution_address %} | {% endif %}{% if contact.institution_address %}{{ contact.institution_address | escape }}{% endif %}</p>
+        {% endif %}
+        {% if contact.email %}
+        <p>Email: <a href="mailto:{{ contact.email | escape }}">{{ contact.email | escape }}</a></p>
+        {% endif %}
       </div>
-      <!-- <div class="col-md-6">
-        <img src="{{ site.github.url }}/{{ contact.image }}" alt="Contact" width="100%">
-      </div> -->
     </div>
     {% endfor %}
   </div>

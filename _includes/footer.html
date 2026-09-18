@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-md-6 text-end social-media-icons">
       {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+        {% assign social_label = item.label | default: item.icon %}
+        <a href="{{ item.link | escape }}" class="ms-3 fs-5" aria-label="{{ social_label | escape }}" title="{{ social_label | escape }}"><i class="fab fa-{{ item.icon | escape }}" aria-hidden="true"></i></a>
       {% endfor %}
     </div>
   </div>

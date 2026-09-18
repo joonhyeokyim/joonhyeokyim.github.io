@@ -4,16 +4,9 @@ menu:
 - {name: 'cv', url: '/cv'}
 - {name: 'contact', url: '/contact'}
 
-# research:
-# - {name: 'Hyperbolicity and Tree-likeness', url: 'hyp-tree-spaces'}
-# - {name: 'Geometric Characteristics on Random Graphs', url: 'random-graphs'}
-# - {name: 'Ultrametric Fitting and its Applications', url: 'ultrametric-apps'}
-
 social:
-- {icon: 'github', link: 'https://github.com/joonhyeokyim'}
-# - {icon: 'twitter', link: 'https://twitter.com/iamjoon'}
-# - {icon: 'instagram', link: 'https://instagram.com/joonh_its_me'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/joon-hyeok-yim-391307127/'}
+- {icon: 'github', label: 'GitHub', link: 'https://github.com/joonhyeokyim'}
+- {icon: 'linkedin', label: 'LinkedIn', link: 'https://www.linkedin.com/in/joon-hyeok-yim-391307127/'}
 
 contacts:
-- {name: 'Joon-Hyeok Yim', title: 'Postdoctoral Associate', department: 'Electrical & Computer Engineering', institution: 'Yale University', institution_address: '15 Prospect Street, New Haven, CT, United States', email: 'joon-hyeok.yim@yale.edu', office: 'B15'}
+- {name: 'Joon-Hyeok Yim', email: 'joonhyeokyim@gmail.com'}
