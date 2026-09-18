@@ -23,7 +23,7 @@
   featured: true
   links:
     - {label: 'arXiv', url: 'https://arxiv.org/abs/2412.05746'}
-    - {label: 'PDF', url: '/papers/HSMOA.pdf'}
+    - {label: 'PDF', url: 'https://arxiv.org/pdf/2412.05746'}
 
 - title: 'Fitting trees to ℓ₁-hyperbolic distances'
   authors: 'Joon-Hyeok Yim and Anna C. Gilbert'
